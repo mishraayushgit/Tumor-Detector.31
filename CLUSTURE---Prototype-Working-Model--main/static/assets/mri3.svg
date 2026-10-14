@@ -1,0 +1,22 @@
+<svg width="300" height="300" viewBox="0 0 300 300" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <!-- MRI Scan Background -->
+    <rect width="300" height="300" fill="#F3F4F6"/>
+    
+    <!-- Brain Outline -->
+    <path d="M150 50C200 50 250 100 250 150C250 200 200 250 150 250C100 250 50 200 50 150C50 100 100 50 150 50Z" fill="white"/>
+    <path d="M150 50C200 50 250 100 250 150C250 200 200 250 150 250C100 250 50 200 50 150C50 100 100 50 150 50Z" stroke="#1F2937" stroke-width="2"/>
+    
+    <!-- Brain Folds -->
+    <path d="M150 80C180 80 220 100 220 150C220 200 180 220 150 220" stroke="#1F2937" stroke-width="2"/>
+    <path d="M150 80C120 80 80 100 80 150C80 200 120 220 150 220" stroke="#1F2937" stroke-width="2"/>
+    
+    <!-- Pituitary Tumor -->
+    <ellipse cx="150" cy="180" rx="30" ry="20" fill="#2563EB" opacity="0.3"/>
+    <ellipse cx="150" cy="180" rx="20" ry="15" fill="#2563EB" opacity="0.5"/>
+    <ellipse cx="150" cy="180" rx="10" ry="10" fill="#2563EB" opacity="0.7"/>
+    
+    <!-- Scan Lines -->
+    <path d="M0 75L300 75" stroke="#E5E7EB" stroke-width="1"/>
+    <path d="M0 150L300 150" stroke="#E5E7EB" stroke-width="1"/>
+    <path d="M0 225L300 225" stroke="#E5E7EB" stroke-width="1"/>
+</svg> 

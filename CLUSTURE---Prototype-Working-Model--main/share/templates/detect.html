@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Detect Brain Tumor - TumorDetect</title>
+    <link rel="stylesheet" href="/static/styles.css">
+    <link rel="stylesheet" href="/static/detect.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="logo">
+                <img src="/static/assets/logo.svg" alt="TumorDetect Logo">
+                <span>TumorDetect</span>
+            </div>
+            <div class="nav-links">
+                <a href="/">Home</a>
+                <a href="#">About</a>
+                <a href="#contact">Contact</a>
+                <a href="/" class="detect-btn active">Detect</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Detection Section -->
+    <section class="detection-section">
+        <div class="detection-container">
+            <h1>Detect Brain Tumor</h1>
+            <p>Upload your MRI scan or X-ray image to detect potential brain tumors using our advanced AI technology.</p>
+            
+            <div class="upload-container">
+                <div class="upload-area" id="dropArea">
+                    <i class="fas fa-cloud-upload-alt"></i>
+                    <p>Drag & Drop your image here</p>
+                    <p>or</p>
+                    <label for="fileInput" class="upload-btn">Choose File</label>
+                    <input type="file" id="fileInput" accept="image/*" hidden>
+                </div>
+                
+                <div class="preview-container" id="previewContainer" style="display: none;">
+                    <img id="previewImage" src="" alt="Preview">
+                    <button id="detectBtn" class="cta-button">Detect Tumor</button>
+                </div>
+            </div>
+
+            <div class="result-container" id="resultContainer" style="display: none;">
+                <h2>Detection Result</h2>
+                <div class="result-card">
+                    <div class="result-content">
+                        <h3 id="resultTitle">No Tumor Detected</h3>
+                        <p id="resultConfidence">Confidence: 0%</p>
+                        <p id="resultDescription">Your scan shows no signs of brain tumors.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="info-card">
+                <h3>What You Can Upload</h3>
+                <ul>
+                    <li>MRI Scans (T1, T2, FLAIR)</li>
+                    <li>CT Scans</li>
+                    <li>X-ray Images</li>
+                </ul>
+                <p>Our AI model can detect various types of brain tumors including Glioma, Meningioma, and Pituitary tumors.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-content">
+            <div class="footer-logo">
+                <img src="/static/assets/logo.svg" alt="TumorDetect Logo">
+                <span>TumorDetect</span>
+            </div>
+            <div class="footer-links">
+                <div class="link-group">
+                    <h3>Quick Links</h3>
+                    <a href="/">Home</a>
+                    <a href="#">About</a>
+                    <a href="/">Detection</a>
+                    <a href="#contact">Contact</a>
+                </div>
+                <div class="link-group">
+                    <h3>Resources</h3>
+                    <a href="#">Privacy Policy</a>
+                    <a href="#">Terms of Service</a>
+                    <a href="#">FAQ</a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2024 TumorDetect. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="/static/detect.js"></script>
+</body>
+</html>

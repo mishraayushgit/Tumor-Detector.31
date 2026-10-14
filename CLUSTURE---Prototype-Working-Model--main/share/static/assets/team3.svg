@@ -1,0 +1,23 @@
+<svg width="150" height="150" viewBox="0 0 150 150" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <!-- Background Circle -->
+    <circle cx="75" cy="75" r="75" fill="#F3F4F6"/>
+    
+    <!-- Head -->
+    <circle cx="75" cy="60" r="30" fill="#2563EB" opacity="0.2"/>
+    
+    <!-- Body -->
+    <path d="M75 90C100 90 120 110 120 135H30C30 110 50 90 75 90Z" fill="#2563EB" opacity="0.2"/>
+    
+    <!-- Hair -->
+    <path d="M75 30C95 30 105 40 105 60" stroke="#2563EB" stroke-width="2"/>
+    <path d="M75 30C55 30 45 40 45 60" stroke="#2563EB" stroke-width="2"/>
+    
+    <!-- Stethoscope -->
+    <circle cx="60" cy="75" r="15" stroke="#2563EB" stroke-width="2"/>
+    <path d="M60 90L60 120" stroke="#2563EB" stroke-width="2"/>
+    <circle cx="60" cy="120" r="5" fill="#2563EB"/>
+    
+    <!-- Medical Symbol -->
+    <path d="M90 100L110 80" stroke="#2563EB" stroke-width="2"/>
+    <path d="M90 80L110 100" stroke="#2563EB" stroke-width="2"/>
+</svg> 
