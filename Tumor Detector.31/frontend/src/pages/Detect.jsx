@@ -2,11 +2,18 @@ import { useState, useRef, useCallback, useEffect } from 'react'
 import { Upload, RefreshCw, AlertTriangle, CheckCircle2, XCircle, Loader2 } from 'lucide-react'
 import Footer from '../components/Footer'
 
-// Backend Live URL (Render 24/7 AI Engine)
-const API_URL = import.meta.env.VITE_API_URL || 'https://tumor-detector-31-lite.onrender.com/api/detect'
+// Smart URL Resolver (Handles both root URL and /api/detect automatically)
+const RAW_URL = import.meta.env.VITE_API_URL || 'https://tumor-detector-31-lite.onrender.com'
+const CLEAN_BASE = RAW_URL.replace(/\/+$/, '')
+const API_URL = CLEAN_BASE.endsWith('/api/detect') ? CLEAN_BASE : `${CLEAN_BASE}/api/detect`
 
 const CLASS_LABELS = ['glioma', 'meningioma', 'notumor', 'pituitary']
-const DISPLAY_NAMES = { glioma: 'Glioma', meningioma: 'Meningioma', notumor: 'No Tumor', pituitary: 'Pituitary' }
+const DISPLAY_NAMES = { 
+  glioma: 'Glioma', 
+  meningioma: 'Meningioma', 
+  notumor: 'No Tumor', 
+  pituitary: 'Pituitary' 
+}
 const STATUS_MESSAGES = [
   'Uploading scan…',
   'Connecting to AI Cloud Engine…',
@@ -193,7 +200,7 @@ export default function Detect() {
     } catch (err) {
       clearTimeout(timeoutId)
       if (err.name === 'AbortError') {
-        setErrorMsg('Request timed out. The cloud server might be waking up (cold start) — please click Try Again in 10 seconds.')
+        setErrorMsg('Request timed out. The cloud server is waking up — please click Try Again in 10 seconds.')
       } else {
         setErrorMsg(err.message || 'Something went wrong. Please check your connection and try again.')
       }
